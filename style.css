@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+.attribution a { 
+    color: hsl(183, 100%, 15%);
+}
+
+body {
+    background-color: hsl(185, 41%, 84%);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    width: 55%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    width: 100%;
+    flex: 25%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 100%;
+    flex: 75%;
+    border-radius: 20px;
+    background-color: hsl(189, 41%, 97%);
+    box-shadow: 0px 0px 20px -10px hsl(183, 100%, 15%);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+}
+
+.bill-section {
+    flex: 50%;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+label {
+    color: hsl(183, 100%, 15%);
+}
+
+.tip-labels {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+}
+
+.tip {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    width: 90%;
+    background-color: hsl(183, 100%, 15%);
+    color: hsl(0, 0%, 100%);
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0px;
+    cursor: pointer;
+}
+
+.tip:last-child {
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(186, 14%, 43%);
+    cursor: default;
+}
+
+.svg {
+    position: absolute;
+    margin: 6px 15px;
+}
+
+.bill-input {
+    width: 90%;
+    height: 30px;
+    padding: 0px 10px;
+    text-align: right;
+    border: none;
+    outline: none;
+    background-color: hsl(185, 41%, 84%);
+    border-radius: 5px;
+    font-size: 24px;
+    color:hsl(183, 100%, 15%);
+}
+
+.total-section {
+    flex: 50%;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(183, 100%, 15%);
+    border-radius: 15px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tip-text-2 {
+    color: hsl(172, 67%, 45%);
+    font-size: 30px;
+    flex: 30%;
+    margin-top: -10px;
+}
+
+span {
+    color: #aaa;
+    font-size: 10px;
+}
+
+p {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    flex: 70%;
+    font-size: 12px;
+}
+
+.tip-amount, .total {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.total {
+    margin-top: 30px;
+}
+
+button {
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    height: 35px;
+    background-color:hsl(172, 67%, 45%);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px -5px black;
+    cursor: pointer;
+    color: hsl(183, 100%, 15%);
+}
+
+@media only screen and (max-width: 375px){
+	.card {
+        flex-direction: column;
+    }
+    .main {
+        width: 100%;
+        height: 100vh;
+    }
+    .logo {
+        flex: 15%;
+    }
+    .card {
+        flex: 85%;
+        align-items: center;
+        justify-content: center;
+    }
+    .total-section {
+        flex: 40%;
+        width: 80%;
+    }
+    .bill-section {
+        flex: 60%;
+        margin-bottom: 20px;
+        width: 80%;
+    }
+    .attribution {
+        bottom: 0px;
+    }
+}
